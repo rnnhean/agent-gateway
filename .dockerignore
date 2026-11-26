@@ -1,0 +1,10 @@
+**/node_modules
+web/dist
+test
+e2e
+bench
+results
+*.md
+.env*
+.git
+.github

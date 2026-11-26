@@ -1,0 +1,36 @@
+{
+  "name": "agent-gateway",
+  "version": "0.1.0",
+  "description": "LLM 网关：多 provider 路由与故障转移、令牌桶限流、并发闸门、语义无关的精确缓存、成本预算与熔断、SSE 流式透传、Prometheus 指标",
+  "type": "module",
+  "license": "MIT",
+  "main": "./src/index.mjs",
+  "bin": {
+    "agent-gateway": "./src/server.mjs"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "env.example",
+    "Dockerfile"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "serve": "node src/server.mjs",
+    "bench": "node bench/load.mjs"
+  },
+  "keywords": [
+    "llm",
+    "gateway",
+    "rate-limit",
+    "circuit-breaker",
+    "sse",
+    "observability"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}
